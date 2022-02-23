@@ -3,8 +3,8 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/secure">Secure</router-link>
     <span> | </span>
-    <a href="#" @click="authService.signIn()" v-if="!authService.isAuthenticated">Login</a>
-    <a href="#" @click="authService.signOut()" v-else>Logout</a>
+    <a href="#" @click.prevent="authService.signIn()" v-if="!authService.isAuthenticated">Login</a>
+    <a href="#" @click.prevent="authService.signOut()" v-else>Logout</a>
   </div>
   <router-view/>
 </template>
